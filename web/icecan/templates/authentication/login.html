@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{{block.super}} - Log in{% endblock %}
+
+{% block content %}
+Hi there! Please log in:
+{% include 'authentication/_login.html' %}
+{% endblock content %}

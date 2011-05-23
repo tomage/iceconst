@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>{% block title %}IceCan{% endblock %}</title>
+    <link rel="stylesheet" href="/static/design/main.css" type="text/css"/>
+    <script src="/static/design/jquery.js" type="text/javascript"></script>
+    <script src="/static/design/jquery-ui.js" type="text/javascript"></script>
+    <script src="/static/design/main.js" type="text/javascript"></script>
+  </head>
+  <body>
+    {% block body %}
+    <div id="user">
+      <div class="panel">
+        {% if user.is_authenticated %}
+        <h2>Welcome {{user}}</h2>
+        <div>
+        <a href="/logout/">Logout</a>
+        </div>
+        {% else %}
+        <h2>Login:</h2>
+        {% with login_form as form %}
+          {% include 'authentication/_login.html' %}
+        {% endwith %}
+        {% endif %}
+      </div>
+      <a id="hide" href="#" >...</a>
+    </div>
+    
+    <div id="header" class="panel">
+      <h1>{% block header %}Icelandic Constitution Analysis Support Project{% endblock %}</h1>
+    </div>
+    
+    <div id="menu" class="panel">
+      <h2>Menu:</h2>
+      <ul>
+        <li class="first"><a href="">Home</a></li>
+        <li><a href="">item 1</a></li>
+        <li><a href="">item 2</a></li>
+        <li><a href="">item 3</a></li>
+        <li><a href="">item 4</a></li>
+      </ul>
+    </div>
+    <span class="border-deco"></span>
+    
+    <div id="content" class="panel">
+      <div>
+        <h2>Content:</h2>
+        {% block content %}
+        CONTENT BLOCK
+        {% endblock content %}
+      </div>
+    </div>
+    
+    <span class="border-deco"></span>
+    <div id="footer" class="panel">
+      <h2>Footer:</h2>
+      {% block footer %}
+      ...phooter...
+      {% endblock footer %}
+    </div>
+    {% endblock %}
+  </body>
+</html>

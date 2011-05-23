@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-05-22 22:27-0500\n"
+"PO-Revision-Date: 2011-05-22 22:27\n"
+"Last-Translator:   <tomas@tomasarni.net>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"X-Translated-Using: django-rosetta 0.6.0\n"
+
+#: settings.py:54
+msgid "Icelandic"
+msgstr "Íslenska"
+
+#: settings.py:55
+msgid "English"
+msgstr "Enska"
+
+#: settings.py:56
+msgid "Spanish"
+msgstr "Spænska"
+
+#: authentication/admin.py:19
+msgid "Personal info"
+msgstr "Persónulegar upplýsingar"
+
+#: authentication/admin.py:20
+msgid "Permissions"
+msgstr "Leyfi"
+
+#: authentication/admin.py:21
+msgid "Important dates"
+msgstr "Mikilvægar dagsetningar"
+
+#: authentication/admin.py:22 authentication/models.py:27
+msgid "Groups"
+msgstr "Hópar"
+
+#: authentication/models.py:8
+msgid "User"
+msgstr "Notandi"
+
+#: authentication/models.py:9
+msgid "Users"
+msgstr "Notendur"
+
+#: authentication/models.py:11
+msgid "Administrator"
+msgstr "Stjórnandi"
+
+#: authentication/models.py:12
+msgid "Analyst"
+msgstr "Greinandi (analyst)"
+
+#: authentication/models.py:13
+msgid "Normal internet user"
+msgstr "Hefðbundinn netverji"
+
+#: authentication/models.py:15
+msgid "Type"
+msgstr "Tegund"
+
+#: authentication/models.py:26
+msgid "Group"
+msgstr "hópur"
+
+#: main/models.py:15 main/models.py:31 main/models.py:34
+msgid "document"
+msgstr "skjal"
+
+#: main/models.py:16
+msgid "documents"
+msgstr "skjöl"
+
+#: main/models.py:17
+msgid "title"
+msgstr "Titill"
+
+#: main/models.py:18
+msgid "version number"
+msgstr "útgáfunúmer"
+
+#: main/models.py:29 main/models.py:35
+msgid "paragraph"
+msgstr "málsgrein"
+
+#: main/models.py:30
+msgid "paragraphs"
+msgstr "málsgreinar"
+
+#: main/models.py:36
+msgid "text"
+msgstr "Texti"
+
+#: main/models.py:37
+msgid "language"
+msgstr "Tungumál"
+
+#: templates/authentication/_login.html:6
+msgid "Log me in"
+msgstr "Skráðu mig inn"
+
+#~ msgid "Spain"
+#~ msgstr "Spænska"

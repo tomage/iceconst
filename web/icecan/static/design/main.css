@@ -1,0 +1,146 @@
+
+body {
+  color: #aaa;
+  background-color: #222;
+//  text-shadow: 0px 1px 1px #005;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-shadow: none;
+  text-decoration: none;
+}
+a:visited {
+  color: gray;
+}
+a:hover {
+  color: white;
+  text-shadow: 0px 0px 5px #fff;
+}
+
+.panel > * {
+//  border: 1px dashed red;
+  width: 810px;
+  margin: 0 auto;
+}
+.border-deco {
+  display: block;
+  border-top: 1px solid #aaa;
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+
+#user {
+  font-size: 0.7em;
+  border-bottom: 1px solid gray;
+}
+#user > div {
+  display: none;
+  padding: 1em;
+}
+#user #hide {
+  display: block;
+  text-align: center;
+  padding: 0.2em 0;
+  font-style: italic;
+  margin: 0px;
+  background-color: #333;
+  border-top: 1px solid gray;
+}
+
+
+#header {
+  text-align: center;
+  background-color: black;
+  text-shadow: 0px 0px 2px #fff;
+  //min-height: 5em;
+  border-bottom: 2px solid #444;
+  padding: 2em;
+}
+
+
+#menu h2 {
+  display: none;
+}
+#menu {
+  background-color: #000000;
+  border-bottom: 2px solid #444;
+}
+#menu ul {
+  padding: 0;
+}
+#menu li {
+  text-align: center;
+  border-right: 1px solid gray;
+  display: inline-block;
+  padding: 9px;
+  margin: 0px;
+  list-style: none;
+  width: 6em;
+}
+#menu li.first {
+  border-left: 1px solid gray;
+}
+
+#content h2 {
+  display: none;
+}
+#content {
+  background-color: #aaa;
+  color: black;
+  width: 770px;
+  margin: 0px auto;
+  padding: 0.1em 20px;
+}
+#content > * {
+  width: 100%;
+}
+
+#footer h2 {
+  display: none;
+}
+#footer {
+  padding: 2em;
+  text-align: center;
+  background-color: #000;
+  border-top: 2px solid #444;
+}
+
+
+#login_form {
+}
+#login_form input[type="submit"] {
+}
+label {
+  display: block;
+  width: 8em;
+  float: left;
+}
+
+ul#translations {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+#translations li {
+  opacity: 0.6;
+  background-color: #222222;
+  text-align: center;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  display: inline-block;
+  padding: 4px;
+  margin: 0px;
+  list-style: none;
+  width: 3em;
+}
+#translations li:hover {
+  opacity: 0.9;
+}

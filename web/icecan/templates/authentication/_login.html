@@ -1,0 +1,8 @@
+{% load i18n %}
+
+<form id="login_form" action="." method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="{% trans 'Log me in' %}!"></input>
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>

@@ -1,1 +1,8 @@
 *.pyc
+
+# For eclipse project files
+.project
+.pydevproject
+
+# TEMP. Ignoring temporary database file (tomage)
+*.sqlite3

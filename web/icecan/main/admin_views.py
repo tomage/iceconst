@@ -34,7 +34,7 @@ def generate_translations(request, response):
         try:
             OriginalText.objects.get(document=doc, language=lang[0])
         except:
-            ot = OriginalText(dict(document=doc, language=lang[0]))
+            ot = OriginalText(document=doc, language=lang[0])
             try:
                 ot.text = google_translate_text(icelandic_text.text)
             except:

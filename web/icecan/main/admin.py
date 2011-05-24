@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.conf import settings
 #from django.utils.translation import ugettext, ugettext_lazy as _
 
-from models import Document, OriginalText, Annotation
+from models import Document, OriginalText, Annotation, Section, Article
 from icecan.authentication.models import User
 from django import forms
 from icecan.main.widgets import DocumentActionsWidget
@@ -40,3 +40,5 @@ class DocumentAdmin(admin.ModelAdmin):
 
 admin.site.register(Document, DocumentAdmin)
 admin.site.register(Annotation)
+admin.site.register(Section)
+admin.site.register(Article)

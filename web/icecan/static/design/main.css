@@ -1,7 +1,7 @@
 
 body {
   color: #aaa;
-  background-color: #222;
+  background-color: #DDDDDD;
 //  text-shadow: 0px 1px 1px #005;
   margin: 0;
 }
@@ -57,7 +57,7 @@ a:hover {
 #header {
   text-align: center;
   background-color: black;
-  text-shadow: 0px 0px 2px #fff;
+  //text-shadow: 0px 0px 2px #fff;
   //min-height: 5em;
   border-bottom: 2px solid #444;
   padding: 2em;
@@ -143,4 +143,82 @@ ul#translations {
 }
 #translations li:hover {
   opacity: 0.9;
+} 
+ 
+ 
+/* Helgi */
+
+ #content {
+  background-color: #f8f8f8;
+  color: #444;
+  width: 670px;
+  margin: 0px auto;
+  padding: 0.1em 20px;
+}
+
+ body {
+   font-family : Arial, Helvetica, sans-serif;
+   
+ }
+
+#content {
+	padding-right: 100px;
+	padding-left: 40px;
+	padding-top: 20px;
+}
+ 
+#content li {
+	list-style-type: none;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+#content  h5{
+	padding-bottom: 5px;
+	border-bottom: dotted 1px #ddd;
+}
+
+#content  h4{
+	padding-bottom: 5px;
+	border-bottom: dotted 1px #999;
+}
+#content h4, h5, li {
+	font-size: 12px;
+}
+
+#content h4, h5 {
+	font-size: 15px;
+	font-weight: normal;
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+
+
+#content h3 {
+	font-family: Georgia,"Bitstream Vera Serif","Times New Roman",serif;
+	font-size: 20px;
+}
+
+#header h1 {
+	font-family: Georgia,"Bitstream Vera Serif","Times New Roman",serif;
+	font-weight: normal;
+	font-size: 28px;
+	color: #333;
+	text-shadow: 1px 1px 1px #DDD;
+}
+
+#header {
+	background-color: white;
+	border-bottom: 2px solid #dddddd;
+}
+
+#menu {
+  display: none;
+}
+
+#footer {
+  padding: 2em;
+  text-align: center;
+  background-color: white;
+  border-top: 2px solid #dddddd;
 }

@@ -101,6 +101,45 @@ a:hover {
   width: 100%;
 }
 
+.document {
+  width: 300px;
+  padding: 0px;
+  margin: 20px;
+  border: 1px dotted gray;
+}
+.document ul {
+  padding: 0;
+}
+.document li {
+  margin: 0;
+}
+.section li {
+  padding-left: 50px;
+}
+.section {
+  
+}
+.article {
+  opacity: 0.65;
+}
+.article:hover {
+  opacity: 1;
+  background: #f0f0f0;
+}
+.article .old {
+  display: none;
+  width: 250px;
+  left: -310px;
+  position: relative;
+  margin-right: -100%;
+  margin-bottom: -100%;
+  background: #f0f0f0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 9px;
+}
+
 #footer h2 {
   display: none;
 }
@@ -169,8 +208,8 @@ ul#translations {
  
 #content li {
 	list-style-type: none;
-	margin-bottom: 20px;
-	margin-top: 5px;
+/*	margin-bottom: 20px;*/
+/*	margin-top: 5px;*/
 }
 
 #content  h5{

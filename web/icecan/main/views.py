@@ -8,8 +8,8 @@ from icecan.main.models import Document
 @add_response
 def main(request, response):
     
-    # Get latest document for front page...
-    doc = Document.objects.filter().order_by('-modified')[0]
-    response['doc'] = doc
+    # Get latest documents for front page
+#    response['doc'] = Document.objects.filter().order_by('-modified')[0]
+#    response['prevdoc'] = Document.objects.filter().order_by('-modified')[1]
     
     return render_to_response('main/base.html', response)

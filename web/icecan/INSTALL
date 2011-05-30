@@ -1,0 +1,8 @@
+
+Recommend:
+	python2.6 or higher
+	django1.3
+
+Need:
+	django-rosetta
+

@@ -126,18 +126,28 @@ a:hover {
   opacity: 1;
   background: #f0f0f0;
 }
-.article .old {
+.article .old, .article .annotations {
   display: none;
-  width: 250px;
-  left: -310px;
   position: relative;
-  margin-right: -100%;
   margin-bottom: -100%;
   background: #f0f0f0;
   padding: 5px;
   border: 1px solid #ccc;
-  border-right: none;
   border-radius: 9px;
+}
+.article .old {
+  float: left;
+  margin-right: -100%;
+  width: 250px;
+  left: -310px;
+  border-right: none;
+}
+.article .annotations {
+  float: right;
+  margin-left: -100%;
+  right: -260px;
+  width: 250px;
+  border-left: none;
 }
 
 #footer h2 {

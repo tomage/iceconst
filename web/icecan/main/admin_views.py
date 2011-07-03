@@ -5,7 +5,7 @@ from models import Document
 from django.conf import settings
 from icecan.util import add_response
 from icecan.main.document import render_models_for_document, google_translate_text
-from icecan.main.models import OriginalText
+from icecan.main.models import Text
 from django.http import HttpResponseServerError, HttpResponseBadRequest
 
 @add_response

@@ -1,4 +1,4 @@
-from icecan.main.models import OriginalText, Section, Article
+from icecan.main.models import Text, Section, Article
 
 import yaml
 from pprint import pprint

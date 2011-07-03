@@ -1,0 +1,40 @@
+{% extends template_base %}
+
+{% block title %}{{block.super}} - List of documents{% endblock %}
+
+{% block content %}
+
+<h1>List of documents</h1>
+<ul>
+    {% for document in documents %}
+    <li>
+        Title: {{document.title}}
+        <h2>Texts:</h2>
+        <ul>
+            {% for text in document.texts %}
+            <li>
+                Title: {{text.title}}
+                <h2>Sections:</h2>
+                <ul>
+                    {% for section in text.sections %}
+                    <li>
+                        Title: {{section.title}}
+                        <h2>Articles:</h2>
+                        <ul>
+                            {% for article in section.articles %}
+                            <li>
+                                Title: {{article.title}}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

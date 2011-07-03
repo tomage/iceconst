@@ -3,6 +3,11 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('icecan.main.views',
     # Main app
     (r'^$', 'main'),
+    
+
+    (r'^diff/$', 'diff'),
+
+    (r'^documents/$', 'documents'),
 )
 
 # Add some "main"-app admin urls

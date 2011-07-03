@@ -1,0 +1,13 @@
+
+.diff {
+    background: #aaf;
+    margin: 10px;
+}
+
+#oldDiff .wDiffHtmlInsert {
+    display: none;
+}
+#newDiff .wDiffHtmlDelete {
+    display: none;
+}
+

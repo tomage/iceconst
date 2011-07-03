@@ -1,0 +1,91 @@
+{% extends template_base %}
+
+{% block title %}{{block.super}} - List of documents{% endblock %}
+
+{% block css_head %}
+{{block.super}}
+<link rel="stylesheet" href="/static/design/diff.css" type="text/css"/>
+{% endblock css_head %}
+
+{% block js_head %}
+{{block.super}}
+<script src="/static/functional/wDiff.js" type="text/javascript"></script>
+{% endblock js_head %}
+
+{% block content %}
+
+<h1>Comparing {{docA}} with {{docB}}:</h1>
+<div id="oldText">{{oldText}}</div>
+<div id="newText">{{newText}}</div>
+<div id="diff" class="diff"></div>
+<div id="oldDiff" class="diff"></div>
+<div id="newDiff" class="diff"></div>
+<script type="text/javascript">
+    var oldTextElem = $('#oldText');
+    var newTextElem = $('#newText');
+    oldTextElem.hide();
+    newTextElem.hide();
+
+    var oldDiff = WDiffString(oldTextElem.html(), newTextElem.html());
+    var newDiff = WDiffString(oldTextElem.html(), newTextElem.html());
+    $('#oldDiff').html(oldDiff);
+    $('#newDiff').html(newDiff);
+    $('#diff').html(WDiffString(oldTextElem.html(), newTextElem.html()));
+</script>
+
+{% with docA as document %}
+Title: {{document.title}}
+<h2>Texts:</h2>
+<ul>
+    {% for text in document.texts %}
+    <li>
+        Title: {{text.title}}
+        <h2>Sections:</h2>
+        <ul>
+            {% for section in text.sections %}
+            <li>
+                Title: {{section.title}}
+                <h2>Articles:</h2>
+                <ul>
+                    {% for article in section.articles %}
+                    <li>
+                        Title: {{article.title}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endwith %}
+{% with docB as document %}
+Title: {{document.title}}
+<h2>Texts:</h2>
+<ul>
+    {% for text in document.texts %}
+    <li>
+        Title: {{text.title}}
+        <h2>Sections:</h2>
+        <ul>
+            {% for section in text.sections %}
+            <li>
+                Title: {{section.title}}
+                <h2>Articles:</h2>
+                <ul>
+                    {% for article in section.articles %}
+                    <li>
+                        Title: {{article.title}}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
+{% endwith %}
+
+{% endblock content %}

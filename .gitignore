@@ -4,5 +4,8 @@
 .project
 .pydevproject
 
+# Ignoring vi's swp files
+*.swp
+
 # TEMP. Ignoring temporary database file (tomage)
 *.sqlite3

@@ -4,28 +4,30 @@ from django.shortcuts import render_to_response, HttpResponse
 from models import Document
 from django.conf import settings
 from icecan.util import add_response
-from icecan.main.document import render_models_for_document, google_translate_text
+from icecan.main.text import render_models_for_text, google_translate_text
 from icecan.main.models import Text
 from django.http import HttpResponseServerError, HttpResponseBadRequest
 
 @add_response
 def generate_submodels(request, response):
     try:
-        doc_id = int(request.GET.get('document_id'))
-        doc = Document.objects.get(id=doc_id)
-    except:
-        return HttpResponseBadRequest('Please supply valid document id', mimetype='text/plain')
+        text_id = int(request.GET.get('text_id'))
+        text = Text.objects.get(id=text_id)
+    except Text.DoesNotExist:
+        return HttpResponseBadRequest('Please supply valid text id', mimetype='text/plain')
     
-    render_models_for_document(doc)
+    render_models_for_text(text)
     return HttpResponse('Submodel generation successful!', mimetype="text/plain")
 
 @add_response
 def generate_translations(request, response):
+    return HttpResponseServerError('NOT IMPLEMENTED', mimetype='text/plain')
+    return Exception('NOT IMPLEMENTED')
     try:
-        doc_id = int(request.GET.get('document_id'))
-        doc = Document.objects.get(id=doc_id)
+        text_id = int(request.GET.get('text_id'))
+        text = Text.objects.get(id=text_id)
     except:
-        return HttpResponseBadRequest('Please supply valid document id', mimetype='text/plain')
+        return HttpResponseBadRequest('Please supply valid text id', mimetype='text/plain')
     
     # Loop over langs and check if translations exist, if not, create them.
     # If any error occurs, we immediately return ServerError (should probably do sth. more sensible...(

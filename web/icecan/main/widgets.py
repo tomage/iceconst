@@ -11,21 +11,21 @@ class HTMLWidget(widgets.Widget):
     def render(self, name, value, attrs=None):
         return safe(self.html)
 
-class DocumentActionsWidget(HTMLWidget):
+class TextActionsWidget(HTMLWidget):
     def __init__(self, attrs=None, *args, **kwargs):
         self.attrs = attrs or {}
         html = """
-<div id="document_actions_widget">
+<div id="text_actions_widget">
     <ul>
         <li>
-            <a id="js_generate_submodels" href="#">Generate submodels from original texts</a>
+            <a id="js_generate_submodels" href="#">Generate submodels from original text</a>
         </li>
         <li>
-            <a id="js_generate_translations" href="#">Generate google translations for missing original texts</a>
+            <a id="js_generate_translations" href="#">Generate google translations for this text (NOT IMPLEMENTED YET)</a>
         </li>
     </ul>
 </div>
          """
-        super(DocumentActionsWidget, self).__init__(html, *args, **kwargs)
+        super(TextActionsWidget, self).__init__(html, *args, **kwargs)
 
 

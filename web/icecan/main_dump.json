@@ -1,0 +1,101 @@
+[
+  {
+    "pk": 1, 
+    "model": "main.atom", 
+    "fields": {
+      "modified_by": 1, 
+      "created": "2011-07-04 14:02:10", 
+      "title": "Skjal X", 
+      "modified": "2011-07-04 14:02:10", 
+      "created_by": 1, 
+      "active": true, 
+      "slug": "skjal_x"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "main.atom", 
+    "fields": {
+      "modified_by": 1, 
+      "created": "2011-07-04 14:02:21", 
+      "title": "Skjal Y", 
+      "modified": "2011-07-04 14:02:21", 
+      "created_by": 1, 
+      "active": true, 
+      "slug": "skjal_y"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "main.atom", 
+    "fields": {
+      "modified_by": null, 
+      "created": "2011-07-04 15:42:54", 
+      "title": "Texti X", 
+      "modified": "2011-07-04 14:05:00", 
+      "created_by": null, 
+      "active": true, 
+      "slug": "texti_x"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "main.atom", 
+    "fields": {
+      "modified_by": null, 
+      "created": "2011-07-04 15:17:59", 
+      "title": "Texti Y", 
+      "modified": "2011-07-04 14:05:33", 
+      "created_by": null, 
+      "active": true, 
+      "slug": "texti_y"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "main.atom", 
+    "fields": {
+      "modified_by": null, 
+      "created": "2011-07-04 15:17:59", 
+      "title": "Weasel word test", 
+      "modified": "2011-07-04 14:05:33", 
+      "created_by": null, 
+      "active": true, 
+      "slug": "weasel_word_test"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "main.document", 
+    "fields": {
+      "version": "x", 
+      "previous": null
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "main.document", 
+    "fields": {
+      "version": "y", 
+      "previous": null
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "main.text", 
+    "fields": {
+      "original_text": "## Dr\u00f6g X. r\u00e1\u00f0sfundar stj\u00f3rnlaga\u00feings 2011 a\u00f0 n\u00fdrri stj\u00f3rnarskr\u00e1\r\n---\r\n\"Mannr\u00e9ttindi\":\r\n  \"\":\r\n    \u00d6llum skal trygg\u00f0ur r\u00e9ttur til l\u00edfs og til a\u00f0 lifa me\u00f0 mannlegri reisn \u00ed r\u00e9ttl\u00e1tu samf\u00e9lagi. Margbreytileiki mannl\u00edfsins skal virtur \u00ed hv\u00edvetna.\r\n  \"\":\r\n    Allir eru jafnir fyrir l\u00f6gum og skulu nj\u00f3ta mannr\u00e9ttinda \u00e1n nokkurs manngreinar\u00e1lits, svo sem vegna kynfer\u00f0is, aldurs, arfger\u00f0ar, b\u00fasetu, efnahags, f\u00f6tlunar, kynhneig\u00f0ar, litarh\u00e1ttar, sko\u00f0ana, stj\u00f3rnm\u00e1latengsla, tr\u00faarbrag\u00f0a, uppruna, \u00e6tternis og st\u00f6\u00f0u a\u00f0 \u00f6\u00f0ru leyti.\r\n    Konur og karlar skulu nj\u00f3ta jafns r\u00e9ttar \u00ed hv\u00edvetna.\r\n  \"\":\r\n    Allir skulu nj\u00f3ta mannhelgi og verndar gegn hvers kyns ofbeldi, svo sem kynfer\u00f0isofbeldi, innan heimilis og utan.\r\n  \"\":\r\n    Allir skulu nj\u00f3ta fri\u00f0helgi einkal\u00edfs, heimilis og fj\u00f6lskyldu.\r\n    Ekki m\u00e1 gera l\u00edkamsranns\u00f3kn e\u00f0a leit \u00e1 manni, leit \u00ed h\u00fasakynnum hans e\u00f0a munum, nema samkv\u00e6mt d\u00f3ms\u00farskur\u00f0i e\u00f0a s\u00e9rstakri lagaheimild. \u00dea\u00f0 sama \u00e1 vi\u00f0 um ranns\u00f3kn \u00e1 skj\u00f6lum og p\u00f3stsendingum, s\u00edmt\u00f6lum og \u00f6\u00f0rum fjarskiptum, svo og hvers konar samb\u00e6rilega sker\u00f0ingu \u00e1 einkal\u00edfi manns.\r\n    \u00der\u00e1tt fyrir \u00e1kv\u00e6\u00f0i 1. mgr. m\u00e1 me\u00f0 s\u00e9rstakri lagaheimild takmarka \u00e1 annan h\u00e1tt fri\u00f0helgi einkal\u00edfs, heimilis e\u00f0a fj\u00f6lskyldu ef br\u00fdna nau\u00f0syn ber til vegna r\u00e9ttinda annarra.\r\n  \"\":\r\n    Allir eru frj\u00e1lsir sko\u00f0ana sinna og sannf\u00e6ringar.\r\n    Hver ma\u00f0ur \u00e1 r\u00e9tt \u00e1 a\u00f0 tj\u00e1 hugsanir s\u00ednar, en \u00e1byrgjast ver\u00f0ur hann \u00fe\u00e6r fyrir d\u00f3mi. Ritsko\u00f0un og a\u00f0rar samb\u00e6rilegar t\u00e1lmanir \u00e1 tj\u00e1ningarfrelsi m\u00e1 aldrei \u00ed l\u00f6g lei\u00f0a.\r\n    Tj\u00e1ningarfrelsi m\u00e1 a\u00f0eins setja skor\u00f0ur me\u00f0 l\u00f6gum til verndar \u00f6ryggi, heilsu, r\u00e9ttindum e\u00f0a mannor\u00f0i annarra, enda teljist \u00fe\u00e6r nau\u00f0synlegar og samr\u00fdmist l\u00fd\u00f0r\u00e6\u00f0ishef\u00f0um.\r\n  \"\":\r\n    B\u00f6rnum skal trygg\u00f0 \u00ed l\u00f6gum s\u00fa vernd og um\u00f6nnun sem velfer\u00f0 \u00feeirra krefst og skulu r\u00e1\u00f0stafanir yfirvalda \u00ed m\u00e1lum sem var\u00f0a b\u00f6rn taka mi\u00f0 af \u00fev\u00ed sem \u00feeim er fyrir bestu.\r\n    Barni skal trygg\u00f0ur r\u00e9ttur til a\u00f0 tj\u00e1 sko\u00f0anir s\u00ednar \u00ed \u00f6llum m\u00e1lum sem \u00fea\u00f0 var\u00f0ar og skal teki\u00f0 r\u00e9ttm\u00e6tt tillit til sko\u00f0ana \u00ed samr\u00e6mi vi\u00f0 aldur \u00feess og \u00feroska.\r\n\"Undirst\u00f6\u00f0ur\":\r\n\"St\u00f6rf Al\u00feingis\":\r\n  \"Skilgreining \u00e1 hlutverki Al\u00feingis\":\r\n    Al\u00feingi sotti vald sitt til \u00fej\u00f3\u00f0arinnar. \u00dea\u00f0 fer me\u00f0 l\u00f6ggjafarvald og fj\u00e1rstj\u00f3rnarvald r\u00edkisins og hefur eftirlit me\u00f0 framkv\u00e6mdarvaldinu svo sem n\u00e1nar er m\u00e6lt fyrir um \u00ed stj\u00f3rnarskr\u00e1 \u00feessari og \u00f6\u00f0rum l\u00f6gum.\r\n  \"Auki\u00f0 v\u00e6gi \u00feingforseta\":\r\n    Al\u00feingi k\u00fds s\u00e9r forseta me\u00f0 123/456 hlutum atkv\u00e6\u00f0a \u00ed upphafi hvers kj\u00f6rt\u00edmabils. Sitji forseti ekki \u00fat kj\u00f6rt\u00edmabil skal sami h\u00e1ttur haf\u00f0ur \u00e1 vi\u00f0 kosningu n\u00fds forseta.\r\n    Blabla. Forseti st\u00fdrir st\u00f6rfum Al\u00feingis. Hann ber \u00e1byrg\u00f0 \u00e1 rekstri \u00feingsins og hefur \u00e6\u00f0sta vald \u00ed stj\u00f3rns\u00fdslu \u00feess. Me\u00f0 forseta starfa varaforsetar og mynda \u00e1samt honum fors\u00e6tisnefnd.\r\n    Forseti Al\u00feingis l\u00e6tur af almennum \u00feingst\u00f6rfum og hefur ekki atkv\u00e6\u00f0isr\u00e9tt. Varama\u00f0ur hans tekur s\u00e6ti \u00e1 \u00feingi \u00e1 me\u00f0an hann gegnir emb\u00e6ttinu.\r\n  \"\u00deingnefndir og hlutverk \u00feeirra\":\r\n    Frumv\u00f6rp og \u00f6nnur \u00feingm\u00e1l eru undirb\u00fain og um \u00feau fjalla\u00f0 \u00ed \u00feingnefndum. Al\u00feingi k\u00fds [fj\u00e1rlaganefnd, eftirlits- og stj\u00f3rnskipunarnefnd, utanr\u00edkism\u00e1lanefnd og a\u00f0rar] nefndir til \u00feess a\u00f0 fjalla um \u00feingm\u00e1l. Um st\u00f6rf \u00feingnefnda skal m\u00e6lt fyrir \u00ed l\u00f6gum.\r\n  \"Frumkv\u00e6\u00f0isr\u00e9ttur\":\r\n    Al\u00feingsmenn hafa einir r\u00e9tt til a\u00f0 flytja frumv\u00f6rp til laga, till\u00f6gur til \u00e1lyktana og \u00f6nnur m\u00e1l.\r\n  \"R\u00e1\u00f0herrar v\u00edki af \u00feingi\":\r\n    R\u00e1\u00f0herrar svara fyrirspurnum og taka \u00fe\u00e1tt \u00ed umr\u00e6\u00f0um \u00e1 Al\u00feingi eftir \u00fev\u00ed sem \u00feeir eru til kvaddir, en g\u00e6ta ver\u00f0a \u00feeir \u00feingskapa.\r\n    R\u00e1\u00f0herrar hafa ekki atkv\u00e6\u00f0isr\u00e9tt \u00e1 Al\u00feingi.\r\n    S\u00e9 al\u00feingisma\u00f0ur skipa\u00f0ur r\u00e1\u00f0herra v\u00edkur hann \u00far \u00feings\u00e6ti \u00e1 me\u00f0an hann gegnir emb\u00e6tti og tekur varama\u00f0ur \u00fe\u00e1 s\u00e6ti hans.", 
+      "document": 1, 
+      "language": "is"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "main.text", 
+    "fields": {
+      "original_text": "## Dr\u00f6g Y. r\u00e1\u00f0sfundar stj\u00f3rnlaga\u00feings 2011 a\u00f0 n\u00fdrri stj\u00f3rnarskr\u00e1\r\n---\r\nMannr\u00e9ttindi:\r\n  \"\":\r\n    \u00d6llum skal trygg\u00f0ur r\u00e9ttur til l\u00edfs og til a\u00f0 lifa me\u00f0 mannlegri reisn \u00ed r\u00e9ttl\u00e1tu samf\u00e9lagi. Margbreytileiki mannl\u00edfsins skal virtur \u00ed hv\u00edvetna.\r\n  \"\":\r\n    Allir eru jafnir fyrir l\u00f6gum og skulu nj\u00f3ta mannr\u00e9ttinda \u00e1n nokkurs manngreinar\u00e1lits, svo sem vegna kynfer\u00f0is, aldurs, arfger\u00f0ar, b\u00fasetu, efnahags, f\u00f6tlunar, kynhneig\u00f0ar, litarh\u00e1ttar, sko\u00f0ana, stj\u00f3rnm\u00e1latengsla, tr\u00faarbrag\u00f0a, uppruna, \u00e6tternis og st\u00f6\u00f0u a\u00f0 \u00f6\u00f0ru leyti.\r\n    Konur og karlar skulu nj\u00f3ta jafns r\u00e9ttar \u00ed hv\u00edvetna.\r\n  \"\":\r\n    Allir skulu nj\u00f3ta mannhelgi og verndar gegn hvers kyns ofbeldi, svo sem kynfer\u00f0isofbeldi, innan heimilis og utan.\r\n  \"\":\r\n    Allir skulu nj\u00f3ta fri\u00f0helgi einkal\u00edfs, heimilis og fj\u00f6lskyldu.\r\n    Ekki m\u00e1 gera l\u00edkamsranns\u00f3kn e\u00f0a leit \u00e1 manni, leit \u00ed h\u00fasakynnum hans e\u00f0a munum, nema samkv\u00e6mt d\u00f3ms\u00farskur\u00f0i e\u00f0a s\u00e9rstakri lagaheimild. \u00dea\u00f0 sama \u00e1 vi\u00f0 um ranns\u00f3kn \u00e1 skj\u00f6lum og p\u00f3stsendingum, s\u00edmt\u00f6lum og \u00f6\u00f0rum fjarskiptum, svo og hvers konar samb\u00e6rilega sker\u00f0ingu \u00e1 einkal\u00edfi manns.\r\n    \u00der\u00e1tt fyrir \u00e1kv\u00e6\u00f0i 1. mgr. m\u00e1 me\u00f0 s\u00e9rstakri lagaheimild takmarka \u00e1 annan h\u00e1tt fri\u00f0helgi einkal\u00edfs, heimilis e\u00f0a fj\u00f6lskyldu ef br\u00fdna nau\u00f0syn ber til vegna r\u00e9ttinda annarra.\r\n  \"\":\r\n    Allir eru frj\u00e1lsir sko\u00f0ana sinna og sannf\u00e6ringar.\r\n    Hver ma\u00f0ur \u00e1 r\u00e9tt \u00e1 a\u00f0 tj\u00e1 hugsanir s\u00ednar, en \u00e1byrgjast ver\u00f0ur hann \u00fe\u00e6r fyrir d\u00f3mi. Ritsko\u00f0un og a\u00f0rar samb\u00e6rilegar t\u00e1lmanir \u00e1 tj\u00e1ningarfrelsi m\u00e1 aldrei \u00ed l\u00f6g lei\u00f0a.\r\n    Tj\u00e1ningarfrelsi m\u00e1 a\u00f0eins setja skor\u00f0ur me\u00f0 l\u00f6gum til verndar \u00f6ryggi, heilsu, r\u00e9ttindum e\u00f0a mannor\u00f0i annarra, enda teljist \u00fe\u00e6r nau\u00f0synlegar og samr\u00fdmist l\u00fd\u00f0r\u00e6\u00f0ishef\u00f0um.\r\n  \"\":\r\n    B\u00f6rnum skal trygg\u00f0 \u00ed l\u00f6gum s\u00fa vernd og um\u00f6nnun sem velfer\u00f0 \u00feeirra krefst og skulu r\u00e1\u00f0stafanir yfirvalda \u00ed m\u00e1lum sem var\u00f0a b\u00f6rn taka mi\u00f0 af \u00fev\u00ed sem \u00feeim er fyrir bestu.\r\n    Barni skal trygg\u00f0ur r\u00e9ttur til a\u00f0 tj\u00e1 sko\u00f0anir s\u00ednar \u00ed \u00f6llum m\u00e1lum sem \u00fea\u00f0 var\u00f0ar og skal teki\u00f0 r\u00e9ttm\u00e6tt tillit til sko\u00f0ana \u00ed samr\u00e6mi vi\u00f0 aldur \u00feess og \u00feroska.\r\n  \"\":\r\n    MEIRA SEM VANTAR...\r\n  Heilbrig\u00f0is\u00fej\u00f3nusta:\r\n    \u00d6llum skal trygg\u00f0ur me\u00f0 l\u00f6gum r\u00e9ttur til heilbrig\u00f0is\u00fej\u00f3nustu sem mi\u00f0ar a\u00f0 l\u00edkamlegri og andlegri heilsu a\u00f0 h\u00e6sta marki sem unnt er.\r\nUndirst\u00f6\u00f0ur:\r\nSt\u00f6rf Al\u00feingis:\r\n  Skilgreining \u00e1 hlutverki Al\u00feingis:\r\n    Al\u00feingi s\u00e6kir vald sitt til \u00fej\u00f3\u00f0arinnar. \u00dea\u00f0 fer me\u00f0 l\u00f6ggjafarvald og fj\u00e1rstj\u00f3rnarvald r\u00edkisins og hefur eftirlit me\u00f0 framkv\u00e6mdarvaldinu svo sem n\u00e1nar er m\u00e6lt fyrir um \u00ed stj\u00f3rnarskr\u00e1 \u00feessari og \u00f6\u00f0rum l\u00f6gum.\r\n  Auki\u00f0 v\u00e6gi \u00feingforseta:\r\n    Al\u00feingi k\u00fds s\u00e9r forseta me\u00f0 2/3 hlutum atkv\u00e6\u00f0a \u00ed upphafi hvers kj\u00f6rt\u00edmabils. Sitji forseti ekki \u00fat kj\u00f6rt\u00edmabil skal sami h\u00e1ttur haf\u00f0ur \u00e1 vi\u00f0 kosningu n\u00fds forseta.\r\n    Forseti st\u00fdrir st\u00f6rfum Al\u00feingis. Hann ber \u00e1byrg\u00f0 \u00e1 rekstri \u00feingsins og hefur \u00e6\u00f0sta vald \u00ed stj\u00f3rns\u00fdslu \u00feess. Me\u00f0 forseta starfa varaforsetar og mynda \u00e1samt honum fors\u00e6tisnefnd.\r\n    Forseti Al\u00feingis l\u00e6tur af almennum \u00feingst\u00f6rfum og hefur ekki atkv\u00e6\u00f0isr\u00e9tt. Varama\u00f0ur hans tekur s\u00e6ti \u00e1 \u00feingi \u00e1 me\u00f0an hann gegnir emb\u00e6ttinu.\r\n  \u00deingnefndir og hlutverk \u00feeirra:\r\n    Frumv\u00f6rp og \u00f6nnur \u00feingm\u00e1l eru undirb\u00fain og um \u00feau fjalla\u00f0 \u00ed \u00feingnefndum. Al\u00feingi k\u00fds [fj\u00e1rlaganefnd, eftirlits- og stj\u00f3rnskipunarnefnd, utanr\u00edkism\u00e1lanefnd og a\u00f0rar] nefndir til \u00feess a\u00f0 fjalla um \u00feingm\u00e1l. Um st\u00f6rf \u00feingnefnda skal m\u00e6lt fyrir \u00ed l\u00f6gum.\r\n  Frumkv\u00e6\u00f0isr\u00e9ttur:\r\n    Al\u00feingsmenn hafa einir r\u00e9tt til a\u00f0 flytja frumv\u00f6rp til laga, till\u00f6gur til \u00e1lyktana og \u00f6nnur m\u00e1l.", 
+      "document": 2, 
+      "language": "is"
+    }
+  } 
+]

@@ -14,16 +14,19 @@
             {% for text in document.texts %}
             <li>
                 Title: {{text.title}}
-                <h2>Sections:</h2>
+                <h3>Sections:</h3>
                 <ul>
                     {% for section in text.sections %}
                     <li>
                         Title: {{section.title}}
-                        <h2>Articles:</h2>
+                        <h4>Articles:</h4>
                         <ul>
                             {% for article in section.articles %}
                             <li>
                                 Title: {{article.title}}
+                                {% if article.buffer %}
+                                <br/>{{article.buffer|safe}}
+                                {% endif %}
                             </li>
                             {% endfor %}
                         </ul>

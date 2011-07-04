@@ -23,26 +23,14 @@ def diff(request, response):
     r['docB'] = docB
 
     # Create article comparisons
-    article_comparisons = []
+    articles = []
     for articleA in docA.articles:
         for articleB in docB.articles:
             if articleB.slug != articleA.slug:
                 continue
+            articles.append({'articleA': articleA, 'articleB': articleB})
             break
-    r['article_comparisons'] = article_comparisons
-
-    r['oldText'] = """A text, within literary theory, is a coherent set of symbols that transmits some kind of informative message.
-This set of symbols is conidered in terms of the infomative message's content, rather than in terms of its physical form or the medium in which it is represented. In the most basic terms established by structuralist criticism,
-therefore, a "text" is any object that can be "read,"
-whether this object is a
-work of literature, a street sign, an arrangement of buildings on a city block, or styles of clothing."""
-    r['newText'] = """A text, within literary theory, is the coherent set of symbs that transmits some kind of informative message.
-This set of in terms of the informative message's content, symbols rather than in terms of its physical form or the medium in which it is represented. In the most basic terms established by structuralist criticism,
-therefore, a "text" is any object that can be "read,"
-
-whether is a
-whether is a
-work of literature, new text here a street sign, an interesting arrangement of buildings on a city block, or styles of clothing."""
+    r['articles'] = articles
 
     return render_to_response('main/diff.html', response)
 

@@ -1,13 +1,18 @@
 
-.diff {
-    background: #aaf;
+.clearboth {
+    clear: both;
+}
+
+.diffs .old,
+.diffs .new {
+    background: #ccf;
+    width: 45%;
+    float: left;
     margin: 10px;
 }
 
-#oldDiff .wDiffHtmlInsert {
-    display: none;
-}
-#newDiff .wDiffHtmlDelete {
+.diffs .old .wDiffHtmlInsert,
+.diffs .new .wDiffHtmlDelete {
     display: none;
 }
 

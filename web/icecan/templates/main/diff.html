@@ -1,4 +1,5 @@
 {% extends template_base %}
+{% load icecan %}
 
 {% block title %}{{block.super}} - List of documents{% endblock %}
 
@@ -15,24 +16,6 @@
 {% block content %}
 
 <h1>Comparing {{docA}} with {{docB}}:</h1>
-<div id="oldText">{{oldText}}</div>
-<div id="newText">{{newText}}</div>
-<div id="diff" class="diff"></div>
-<div id="oldDiff" class="diff"></div>
-<div id="newDiff" class="diff"></div>
-<script type="text/javascript">
-    var oldTextElem = $('#oldText');
-    var newTextElem = $('#newText');
-    oldTextElem.hide();
-    newTextElem.hide();
-
-    var oldDiff = WDiffString(oldTextElem.html(), newTextElem.html());
-    var newDiff = WDiffString(oldTextElem.html(), newTextElem.html());
-    $('#oldDiff').html(oldDiff);
-    $('#newDiff').html(newDiff);
-    $('#diff').html(WDiffString(oldTextElem.html(), newTextElem.html()));
-</script>
-
 {% with docA as document %}
 Title: {{document.title}}
 <h2>Texts:</h2>
@@ -48,8 +31,20 @@ Title: {{document.title}}
                 <h2>Articles:</h2>
                 <ul>
                     {% for article in section.articles %}
-                    <li>
+                    <li class="article">
                         Title: {{article.title}}
+                        {% with article|find_diff_article:articles as article_pair %}
+                        <br/>Original article: {{article_pair.articleB}}
+                        <div class="texts">
+                            <div id="text_article_{{article.id}}" class="old">{{article.buffer}}</div>
+                            <div id="text_article_{{article_pair.articleB.id}}" class="new">{{article_pair.articleB.buffer}}</div>
+                        </div>
+                        <div class="diffs">
+                            <div id="diff_article_{{article.id}}" class="old"></div>
+                            <div id="diff_article_{{article_pair.articleB.id}}" class="new"></div>
+                        </div>
+                        <div class="clearboth"></div>
+                        {% endwith %}
                     </li>
                     {% endfor %}
                 </ul>
@@ -60,32 +55,18 @@ Title: {{document.title}}
     {% endfor %}
 </ul>
 {% endwith %}
-{% with docB as document %}
-Title: {{document.title}}
-<h2>Texts:</h2>
-<ul>
-    {% for text in document.texts %}
-    <li>
-        Title: {{text.title}}
-        <h2>Sections:</h2>
-        <ul>
-            {% for section in text.sections %}
-            <li>
-                Title: {{section.title}}
-                <h2>Articles:</h2>
-                <ul>
-                    {% for article in section.articles %}
-                    <li>
-                        Title: {{article.title}}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            {% endfor %}
-        </ul>
-    </li>
-    {% endfor %}
-</ul>
-{% endwith %}
+
+<script type="text/javascript">
+    $('.article').each(function () {
+            var oldTextElem = $(this).find('.texts .old');
+            var newTextElem = $(this).find('.texts .new');
+            oldTextElem.hide();
+            newTextElem.hide();
+            var oldDiff = WDiffString(oldTextElem.html(), newTextElem.html());
+            var newDiff = WDiffString(oldTextElem.html(), newTextElem.html());
+            $(this).find('.diffs .old').html(oldDiff);
+            $(this).find('.diffs .new').html(newDiff);
+        });
+</script>
 
 {% endblock content %}

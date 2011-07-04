@@ -3,12 +3,15 @@ var extra_selectors = new Array('.old', '.annotations');
 
 function displayExtra(event) {
   var t = $(this);
-  $.each(extra_selectors, function (idx, extra_selector)
+  $.each(extra_selectors,
+    function (idx, extra_selector)
     {
-      $(extra_selector+':visible').hide();
+      $('.article').removeClass('focus');
+      t.addClass('focus');
+      $(extra_selector).addClass('hide');
       var els = t.find(extra_selector);
-      els.css('top', -t.height());
-      els.show();
+      els.css('top', -t.height()+15);
+      els.removeClass('hide')
     });
 }
 

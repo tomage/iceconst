@@ -88,7 +88,7 @@ a:hover {
 }
 
 #content h2 {
-  display: none;
+  /*display: none;*/
 }
 #content {
   background-color: #aaa;
@@ -105,7 +105,6 @@ a:hover {
   width: 300px;
   padding: 0px;
   margin: 20px;
-  border: 1px dotted gray;
 }
 .document ul {
   padding: 0;
@@ -122,12 +121,14 @@ a:hover {
 .article {
   opacity: 0.65;
 }
-.article:hover {
+.article.focus {
   opacity: 1;
   background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 9px;
 }
+/*
 .article .old, .article .annotations {
-  display: none;
   position: relative;
   margin-bottom: -100%;
   background: #f0f0f0;
@@ -135,6 +136,11 @@ a:hover {
   border: 1px solid #ccc;
   border-radius: 9px;
 }
+*/
+.hide {
+  display: none;
+}
+/*
 .article .old {
   float: left;
   margin-right: -100%;
@@ -142,12 +148,20 @@ a:hover {
   left: -310px;
   border-right: none;
 }
+    */
 .article .annotations {
   float: right;
   margin-left: -100%;
-  right: -260px;
+  right: -265px;
   width: 250px;
   border-left: none;
+}
+
+.connector {
+  position
+  background: blue;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 #footer h2 {

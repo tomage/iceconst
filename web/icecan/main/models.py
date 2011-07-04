@@ -35,6 +35,7 @@ class Document(Atom):
     
     def __unicode__(self):
         return '%s (ver. %s)' % (self.title, self.version)
+    @property
     def texts(self):
         return Text.objects.filter(document=self)
     @property
@@ -48,9 +49,10 @@ class Text(Atom):
     
     document = models.ForeignKey('Document')
     
-    original_text = models.TextField()
+    original_text = models.TextField(help_text=_(u'This is the text we convert to model objects'))
     language = models.CharField(_('language'), max_length=len('xx_XX'), choices=settings.LANGUAGES, default='is')
 
+    @property
     def sections(self):
         return Section.objects.filter(text=self)
 
@@ -62,6 +64,7 @@ class Section(Atom):
     
     text = models.ForeignKey('Text')
     
+    @property
     def articles(self):
         return Article.objects.filter(section=self)
 
@@ -72,10 +75,65 @@ class Article(Atom):
         verbose_name = _('article')
         verbose_name_plural = _('articles')
     
-    section = models.ForeignKey('Section', verbose_name=_('section'))
-    
-    buffer = models.TextField(_('text'))
+    section = models.ForeignKey('Section')
     
     def __unicode__(self):
-        return self.title or u'Article (excerpt: "%s..."' % self.text[:10]
+        return self.title or u'Article (excerpt: "%s..."' % self.buffer[:10]
+    @property
+    def buffer(self):
+        return u'<div id="%d" class="article">%s</div>' % (self.id, u' '.join(p.buffer for p in self.paragraphs))
+    @property
+    def paragraphs(self):
+        return Paragraph.objects.filter(article=self)
 
+class Paragraph(Atom):
+    class Meta:
+        verbose_name = _('paragraph')
+        verbose_name_plural = _('paragraphs')
+
+    article = models.ForeignKey('Article')
+    
+    def __unicode__(self):
+        return self.title or u'Paragraph (excerpt: "%s..."' % self.buffer[:10]
+    @property
+    def buffer(self):
+        return u'<p id="%d" class="paragraph">%s</p>' % (self.id, u' '.join(p.buffer for p in self.sentences))
+    @property
+    def sentences(self):
+        return Sentence.objects.filter(paragraph=self)
+
+
+class Sentence(Atom):
+    class Meta:
+        verbose_name = _('sentence')
+        verbose_name_plural = _('sentences')
+
+    paragraph = models.ForeignKey('Paragraph')
+    
+    raw_buffer = models.TextField()
+
+    def __unicode__(self):
+        return self.title or u'Sentence (excerpt: "%s..."' % self.buffer[:10]
+    @property
+    def buffer(self):
+        return u'<span id="%d" class="sentence">%s</span>' % (self.id, self.raw_buffer)
+
+
+class Phrase(Atom):
+    class Meta:
+        verbose_name = _('phrase')
+        verbose_name_plural = _('phrases')
+
+    article = models.ForeignKey('Article')
+    
+    from_char = models.IntegerField()
+    to_char = models.IntegerField()
+
+    TYPE_CHOICES = (
+        ('NORMAL', 'Normal'),
+        ('AMBIGUOUS', 'Ambiguous'),
+        ('WEASEL', 'Weasel'),
+    )
+    type = models.CharField(max_length=max([len(C[0]) for C in TYPE_CHOICES]), choices=TYPE_CHOICES)
+
+#

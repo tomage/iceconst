@@ -97,7 +97,7 @@ class Paragraph(Atom):
         return self.title or u'Paragraph (excerpt: "%s..."' % self.buffer[:10]
     @property
     def buffer(self):
-        return u'<p id="%d" class="paragraph">%s</p>' % (self.id, u' '.join(p.buffer for p in self.sentences))
+        return u'<p id="%d" class="paragraph">%s</p>' % (self.id, u' '.join(s.buffer for s in self.sentences))
     @property
     def sentences(self):
         return Sentence.objects.filter(paragraph=self)
@@ -115,8 +115,27 @@ class Sentence(Atom):
     def __unicode__(self):
         return self.title or u'Sentence (excerpt: "%s..."' % self.buffer[:10]
     @property
+    def words(self):
+        return Word.objects.filter(sentence=self)
+    @property
     def buffer(self):
-        return u'<span id="%d" class="sentence">%s</span>' % (self.id, self.raw_buffer)
+        return u'<span id="%d" class="sentence">%s</span>' % (self.id, u' '.join(w.buffer for w in self.words))
+        #return u'<span id="%d" class="sentence">%s</span>' % (self.id, self.raw_buffer)
+
+class Word(Atom):
+    class Meta:
+        verbose_name = _('word')
+        verbose_name_plural = _('words')
+
+    sentence = models.ForeignKey('Sentence')
+    
+    raw_buffer = models.TextField()
+
+    def __unicode__(self):
+        return self.title or u'Sentence (excerpt: "%s..."' % self.buffer[:10]
+    @property
+    def buffer(self):
+        return u'<span id="%d" class="word">%s</span>' % (self.id, self.raw_buffer)
 
 
 class Phrase(Atom):

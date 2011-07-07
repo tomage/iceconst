@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.conf import settings
 #from django.utils.translation import ugettext, ugettext_lazy as _
 
-from models import Atom, Document, Text, Section, Article, Paragraph, Sentence, Phrase
+from models import Atom, Document, Text, Section, Article, Paragraph, Sentence, Word, Phrase
 from icecan.authentication.models import User
 from django import forms
 from icecan.main.widgets import TextActionsWidget
@@ -39,4 +39,5 @@ admin.site.register(Section)
 admin.site.register(Article)
 admin.site.register(Paragraph)
 admin.site.register(Sentence)
+admin.site.register(Word)
 admin.site.register(Phrase)

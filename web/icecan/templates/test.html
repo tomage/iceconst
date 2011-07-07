@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  p { color:blue; }
+  div { color:red; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div id="display">dsp</div>
+    <div>
+        <p>
+            <span><span>01234567890Sometext2</span><span>.</span> <span>Clickand</span> <span>dragthe</span> <span>mousetoselecttext</span> <span>in</span> <span>theinputs</span><span>.</span>"</span>
+            <span><span>Sometext2</span><span>.</span> <span>Clickand</span> <span>dragthe</span> <span>mousetoselecttext</span> <span>in</span> <span>theinputs</span><span>.</span>"</span>
+        </p>
+        <p>
+            <span><span>Sometext2</span><span>.</span> <span>Clickand</span> <span>dragthe</span> <span>mousetoselecttext</span> <span>in</span> <span>theinputs</span><span>.</span>"</span>
+            <span><span>Sometext2</span><span>.</span> <span>Clickand</span> <span>dragthe</span> <span>mousetoselecttext</span> <span>in</span> <span>theinputs</span><span>.</span>"</span>
+        </p>
+    </div>
+<script>
+
+// Adapted this from somewhere. Feel horrible for not remembering.
+$.fn.autoSelect = function(){
+    var selectTarget = $(this).parent(); // Select first element from jQuery collection
+    console.log(this);
+    console.log(this[0]);
+    if(selectTarget != null) {
+         if(selectTarget.tagName == 'TEXTAREA' || (selectTarget.tagName == "INPUT" && selectTarget.type == "text")) {
+             selectTarget.select();
+         } else if(window.getSelection) { // FF, Safari, Opera
+             var sel = window.getSelection();
+             var range = document.createRange();
+             range.setStart(selectTarget, 0);
+             range.setEnd(selectTarget, 1);
+             sel.removeAllRanges();
+             sel.addRange(range);
+         } else { // IE
+             document.selection.empty();
+             var range = document.body.createTextRange();
+             range.moveToElementText(selectTarget);
+             range.select();
+         };
+    };
+    return this; // Don't break the chain
+};
+
+//$('span').autoSelect();
+
+function display() {
+    $('#display').html('start: ' + start + ', end: ' + end);
+}
+
+var start = null;
+var end = null;
+$('body').mousedown(function () {
+    start = window.getSelection().anchorOffset; 
+    display();
+});
+$('body').mouseup(function () {
+    end = window.getSelection().focusOffset;
+    //return $(this).autoSelect();
+    display();
+});
+
+</script>
+
+</body>
+</html>

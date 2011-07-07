@@ -23,10 +23,7 @@
                         <ul>
                             {% for article in section.articles %}
                             <li>
-                                Title: {{article.title}}
-                                {% if article.buffer %}
-                                <br/>{{article.buffer|safe}}
-                                {% endif %}
+                                {% include 'main/_article.html' %}
                             </li>
                             {% endfor %}
                         </ul>

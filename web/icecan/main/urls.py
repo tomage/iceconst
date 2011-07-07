@@ -8,6 +8,9 @@ urlpatterns = patterns('icecan.main.views',
     (r'^diff/$', 'diff'),
 
     (r'^documents/$', 'documents'),
+    
+    
+    (r'^test/$', 'test'),
 )
 
 # Add some "main"-app admin urls

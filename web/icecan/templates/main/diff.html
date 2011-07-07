@@ -32,16 +32,14 @@ Title: {{document.title}}
                 <ul>
                     {% for article in section.articles %}
                     <li class="article">
-                        Title: {{article.title}}
                         {% with article|find_diff_article:articles as article_pair %}
-                        <br/>Original article: {{article_pair.articleB}}
                         <div class="texts">
-                            <div id="text_article_{{article.id}}" class="old">{{article.buffer}}</div>
-                            <div id="text_article_{{article_pair.articleB.id}}" class="new">{{article_pair.articleB.buffer}}</div>
+                            <div id="text_article_{{article.id}}" class="old">{{article.buffer|striptags}}</div>
+                            <div id="text_article_{{article_pair.articleB.id}}" class="new">{{article_pair.articleB.buffer|striptags}}</div>
                         </div>
                         <div class="diffs">
-                            <div id="diff_article_{{article.id}}" class="old"></div>
-                            <div id="diff_article_{{article_pair.articleB.id}}" class="new"></div>
+                            <div id="diff_article_{{article.id}}" class="old">Title: {{article.title}}</div>
+                            <div id="diff_article_{{article_pair.articleB.id}}" class="new">Original title: {{article_pair.articleB}}</div>
                         </div>
                         <div class="clearboth"></div>
                         {% endwith %}
@@ -64,8 +62,8 @@ Title: {{document.title}}
             newTextElem.hide();
             var oldDiff = WDiffString(oldTextElem.html(), newTextElem.html());
             var newDiff = WDiffString(oldTextElem.html(), newTextElem.html());
-            $(this).find('.diffs .old').html(oldDiff);
-            $(this).find('.diffs .new').html(newDiff);
+            $(this).find('.diffs .old').append(oldDiff);
+            $(this).find('.diffs .new').append(newDiff);
         });
 </script>
 

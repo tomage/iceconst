@@ -38,3 +38,8 @@ def diff(request, response):
 def documents(request, response):
     response['documents'] = Document.objects.all()
     return render_to_response('main/documents.html', response)
+
+
+@add_response
+def test(request, response):
+    return render_to_response('test.html', response)

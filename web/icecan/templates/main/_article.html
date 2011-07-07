@@ -1,0 +1,6 @@
+Article: {{article.title}}
+{% if article.buffer %}
+<div>
+    {{article.buffer|safe}}
+</div>
+{% endif %}

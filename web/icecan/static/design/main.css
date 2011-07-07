@@ -1,4 +1,26 @@
 
+/* = Hightlight styles ======================================================*/
+
+.article,
+.paragraph,
+.sentence,
+.word {
+}
+
+.article:hover,
+.paragraph:hover,
+.sentence:hover,
+.word:hover {
+    background: #ccd;
+}
+.word:hover {
+    border: 1px solid #aaa;
+    background: white;
+    margin: -1px;
+}
+
+/* ==========================================================================*/
+
 body {
   color: #aaa;
   background-color: #DDDDDD;

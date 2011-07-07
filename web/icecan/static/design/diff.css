@@ -5,7 +5,6 @@
 
 .diffs .old,
 .diffs .new {
-    background: #ccf;
     width: 45%;
     float: left;
     margin: 10px;
